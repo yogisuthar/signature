@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
+    <title>Video background</title>
+</head>
+
+<body>
+
+    <!-- nav button -->
+    <span class="nav-btn" id="nav-btn">
+        <i class="fas fa-bars"></i>
+    </span>
+    <nav class="navbar" id="navbar">
+        <div class="navbar-header">
+            <span class="nav-close" id="nav-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <ul class="nav-items">
+            <li><a href="#head" class="nav-link">Home</a></li>
+            <li>
+                <a href="#about" class="nav-link">About us</a>
+            </li>
+            <li>
+                <a href="#gallery" class="nav-link">Gallery</a>
+            </li>
+            <li>
+                <a href="#contact" class="nav-link">Contact us</a>
+            </li>
+        </ul>
+    </nav>
+    <!--end nav button -->
+
+
+    <!-- header -->
+
+    <header class="v-header container" id="head">
+        <img src="Links/website-signature-logo_03.png" alt="Signature films logo" class="logo">
+        <div class="fullscreen-video-wrap">
+            <video src="move small.webm" autoplay loop></video>
+        </div>
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h1 class="head-main-text"> We believe in crafting emotions, that’s what we do for <br> Individuals,
+                Brands & Agecncies.</h1>
+
+            <p class="show-reel">Show reel <a href="#"><span class="reel-btn"><i class="fas fa-play"></i></span></a></p>
+
+            <a href="#about" class="home-btn-down">
+                <div class="down-page">
+                    <i class="fas fa-angle-down"></i>
+                </div>
+            </a>
+        </div>
+    </header>
+    <!--  About -->
+    <div class="about" id="about">
+        <div class="about-container">
+            <div class="about1-text">
+                <h1 class="about-head">Crafting emotions with detail, purpose & inspiration</h1>
+                <h3 class="about-sub-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci amet, ab soluta modi
+                    dignissimos nobis vel earum. Iure inventore numquam officia a
+                </h3>
+                <span class="Meet-dir">Meet directors
+                </span>
+                <div class="meet-btn">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </div>
+            <div class="about2-text">
+                <h1 class="interest-text">Areas of interest</h1>
+                <ul>
+                    <li>Music Videos</li>
+                    <li>Ad films</li>
+                    <li>Private Content</li>
+                    <li>Wedding films</li>
+                    <li>Events</li>
+                </ul>
+
+            </div>
+            <a href="#gallery" class="dir-btn-down">
+                <div class="down-page2">
+                    <i class="fas fa-angle-down"></i>
+                </div>
+            </a>
+            <a href="#head" class="dir-btn-up">
+                <div class="up-page">
+                    <i class="fas fa-angle-up"></i>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- end of About -->
+    <!-- gallery -->
+    <div class="gallery" id="gallery">
+        <a href="#about" class="gallery-btn-up">
+            <div class="up-page-3">
+                <i class="fas fa-angle-up"></i>
+            </div>
+        </a>
+        <div class="gallery-container">
+            <div class="info-text">
+                <h1>Some of our latest work.</h1>
+                <p class="view-all">view all
+                    <a href="#"><span class="view-btn"><i class="fas fa-play"></i></span>
+                    </a>
+                </p>
+            </div>
+            <div class="container-video">
+
+                <a href=""><span class="play-vid"><i class="fas fa-chevron-circle-right arrow"></i></span></a>
+
+                <div class="next-prev">
+                    <a href=""><i class="fas fa-angle-left left"></i></a>
+                    <a href=""><i class="fas fa-angle-right right"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#contact" class="gallary-btn-down">
+            <div class="down-page-3">
+                <i class="fas fa-angle-down"></i>
+            </div>
+        </a>
+    </div>
+
+    <!-- end of gallery -->
+    <!-- contact us -->
+    <div class="contact-us-container" id="contact">
+        <div class="text-container">
+            <h1>Get in touch with us.</h1>
+            <div class="add">
+                <h2>signature films</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptatum velit veritatis corporis
+                    dolores magni!</p>
+            </div>
+        </div>
+        <div class="contact">
+            <p> +91 022 28969345 <span>/office</span></p>
+            <p> 09821297666<span>/Manager</span></p>
+            <p class="email"> contact@signaturefilms.com</p>
+        </div>
+    </div>
+
+    <!-- end ofcontact us -->
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,747 @@
+:root {
+  --clr-red: #ec1d30;
+  --clr-white: #ffffff;
+  --ff-main: "montserrat", sans-serif;
+  --transition: all 0.5s linear;
+}
+
+ul {
+  list-style: none;
+}
+
+li{
+  font-size: 1.25rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ff-main);
+  /* background: var(--clr-white); */
+  background: var(--clr-red);
+  color: var(--clr-white);
+  font-size: 1.3333rem;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.v-header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.container {
+  max-width: 960px;
+  /* padding-left: 1rem;
+  padding-right: 1rem; */
+  margin: auto;
+  text-align: center;
+}
+
+.fullscreen-video-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.fullscreen-video-wrap video {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.header-overlay {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #225470;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.header-content {
+  z-index: 2;
+  margin: 0 auto;
+}
+
+.header-content p {
+  font-size: 1.5rem;
+  display: block;
+  padding-bottom: 2rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  background: #34b1a0;
+  color: white;
+  font-size: 2rem;
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 960px) {
+  .container {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+}
+
+h1 {
+  font-family: var(--ff-main);
+  font-size: 6vmin;
+  font-weight: 500;
+}
+
+h2 {
+  font-family: var(--ff-main);
+  font-size: 5vmin;
+  line-height: 1rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-family: var(--ff-main);
+  font-size: 3vmin;
+  font-weight: 300;
+}
+
+p {
+  font-family: var(--ff-main);
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+/* @media screen and (min-width: 768px){
+  h1 {
+  font-family: var(--ff-main);
+  font-size: 2.125rem;
+  line-height: 2.5rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-family: var(--ff-main);
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-family: var(--ff-main);
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+p {
+  font-family: var(--ff-main);
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.25rem;
+} 
+
+}*/
+/*
+===========
+other global style
+=========== 
+ */
+
+
+
+
+
+
+
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+/* 
+===========
+nav bar
+===========
+*/
+
+/* navbar */
+
+
+.nav-btn{
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  font-size: 2rem;
+  color:white;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* width: 100%;
+  height: 100%; */
+  background: rgba(255, 255, 255, 0.3);
+  z-index: 6;
+  box-shadow: 2px 0 2px rgba(0, 0, 0, 0.7);
+  transform: translateX(100%);
+  transition: var(--transition);
+}
+.showNav{
+  transform: translateX(0);
+}
+
+.navbar-header{
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.nav-close{
+  font-size: 2rem;
+  cursor: pointer;
+  color: #f29c9c;
+  transition: var(--transition);
+}
+
+.nav-close:hover{
+  color: #bb2525;
+}
+
+.nav-items{
+  float: center;
+  text-align: center;
+  list-style-type: none;
+
+}
+
+.nav-link{
+
+  display: block;
+  font-size: 1.5rem;
+  padding: 0.25rem 1rem;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  transition: var(--transition);
+}
+.nav-link:hover{
+  background: black;
+  color: red;
+  padding: 0.4rem 0;
+  border-left: 0.25rem solid red;
+  border-right: 0.5rem solid red;
+}
+
+@media screen and (min-width:768px){
+
+  .navbar{
+    position: fixed;
+    width: 25vw;
+    max-width: 30rem;
+    top: 0;
+    left: 75%;
+  }
+
+  .nav-items{
+  float: right;
+  text-align: right;
+  list-style-type: none;
+}
+
+}
+
+
+
+/*
+===========
+header style
+=========== 
+ */
+
+/* .banner {
+  background: url(Links/film-background-13340679666UC.jpg) center/cover
+    no-repeat;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+} */
+
+.logo {
+  position: fixed;
+  top: 2%;
+  left: 5%;
+  margin-top: 1rem;
+  z-index: 2;
+}
+
+.head-text {
+  width: 75%;
+  align-items: center;
+  align-content: center;
+  margin: 13rem auto;
+}
+
+.head-main-text {
+  margin-bottom: 1rem;
+}
+
+.show-reel {
+  display: block;
+  margin-top: 3rem;
+}
+
+.reel-btn {
+  color: var(--clr-red);
+  margin-left: 1rem;
+  font-size: 1rem;
+}
+
+.down-page {
+  position: absolute;
+  bottom: 3%;
+  right: 3%;
+  color: var(--clr-white);
+  transition: var(--transition);
+  font-size: 2rem;
+}
+
+
+/*
+===========
+About style
+=========== 
+ */
+
+.about {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.about-container {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 7rem;
+}
+
+.about1-text {
+  float: left;
+  width: 100%;
+  display: block;
+  margin-left: 2rem;
+}
+
+.about-sub-text {
+  width: 80%;
+  margin-top: 1rem;
+}
+
+
+.Meet-dir {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  font-family: var(--ff-main);
+  font-weight: 300;
+  line-height: 1.25rem;
+}
+
+.fa-arrow-right {
+  margin-left: 1rem;
+  font-size: 2rem;
+  align-items: center;
+  display: inline-block;
+}
+
+.meet-btn {
+  display: inline-block;
+  margin-left: 1rem;
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+
+.about2-text {
+  display: inline;
+  width: 100%;
+  float: left;
+  margin-left: 2rem;
+  margin-top: 2.5rem;
+}
+
+
+
+.up-page {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  color: var(--clr-white);
+  transition: var(--transition);
+  font-size: 2rem;
+}
+
+.down-page2 {
+  position: absolute;
+  right: 3%;
+  bottom: 3%;
+  color: var(--clr-white);
+  transition: var(--transition);
+  font-size: 2rem;
+}
+
+
+/*
+===========
+gallery style
+=========== 
+ */
+
+
+.gallery{
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  position: relative;
+}
+
+.gallery-container{
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 7rem;
+  position: relative;
+}
+
+
+.info-text{
+  display: inline-block;
+  width: 100%;
+  /* margin-left: 5.5rem; */
+  text-align: center;
+}
+
+.view-all{
+  margin-top: 1rem;
+}
+
+.container-video {
+  background:url(Links/1.PNG) center/cover no-repeat;
+  width: 90% ;
+  float: left;
+  margin-left: 2rem;
+  height: 50vh;
+  top: 0;
+  left: 0;
+  position: relative;
+  margin-top: 2rem;
+  padding: 0;
+}
+
+
+.view-all span{
+  color: red;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+.arrow{
+  text-align: center;
+  font-size: 2.5rem;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: var(--clr-red);
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+}
+
+.arrow:hover{
+  font-size: 3rem;
+  transition: var(--transition);
+}
+.next-prev{
+  display: inline;
+  position: absolute;
+  top: 102%;
+  left: 46%;
+  margin-right: 2rem;
+}
+
+.right{
+  margin-left: 1rem;
+}
+
+.left{
+  margin-right: 1rem;
+}
+
+
+.up-page-3{
+  position:absolute;
+  top: 3%;
+  right: 6%;
+  font-size: 2rem;
+}
+.down-page-3{
+  position:absolute;
+  bottom: 3%;
+  right: 6%;
+  font-size: 2rem;
+}
+
+/* 
+================
+contact us
+===============
+*/
+
+.contact-us-container{
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  padding: 7rem 5rem;
+  display: inline-block;
+}
+
+.add h2{
+  text-transform: uppercase;
+  color: red;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.add p{
+  margin-bottom: 5rem;
+  font-weight: 100;
+}
+
+
+.contact p span{
+  color: red;
+  text-transform: capitalize;
+}
+
+.email{
+  color: red;
+}
+/* 992px copy style to check */
+
+
+@media screen and (min-width:992px){
+  
+.about {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.about-container {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 12rem;
+}
+
+.about1-text {
+  float: left;
+  width: 60%;
+  display: inline;
+}
+
+.about-sub-text {
+  width: 55%;
+  margin-top: 2rem;
+}
+
+.about2-text {
+  display: inline;
+  width: 30%;
+  float: left;
+  margin-left: 3rem;
+}
+
+.meet-dir {
+  display: inline-block;
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  font-family: var(--ff-main);
+  font-weight: 300;
+  line-height: 1.25rem;
+}
+
+.fa-arrow-right {
+  margin-left: 1rem;
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  align-items: center;
+  display: inline-block;
+}
+
+.meet-btn {
+  display: inline-block;
+  margin-left: 1rem;
+  font-size: 2rem;
+  margin-top: 1.5rem;
+}
+
+.up-page {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  color: var(--clr-white);
+  transition: var(--transition);
+  font-size: 2rem;
+}
+
+.down-page2 {
+  position: absolute;
+  right: 3%;
+  bottom: 3%;
+  color: var(--clr-white);
+  transition: var(--transition);
+  font-size: 2rem;
+}
+
+
+/*
+===========
+gallery style
+=========== 
+ */
+
+
+.gallery{
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  position: relative;
+}
+
+.gallery-container{
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 9rem;
+  position: relative;
+}
+
+
+.info-text{
+  display: inline;
+  float: left;
+  width: 40%;
+  margin-top: 8rem;
+}
+
+.container-video {
+  background:url(Links/1.PNG) center/cover no-repeat;
+  float: right;
+  width: 60% ;
+  height: 50vh;
+  display: block;
+  top: 0;
+  left: 0;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.view-all{
+  margin-top: 2rem;
+}
+
+.view-all span{
+  color: red;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+.arrow{
+  text-align: center;
+  font-size: 2.5rem;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: var(--clr-red);
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+}
+
+.arrow:hover{
+  font-size: 3rem;
+  transition: var(--transition);
+}
+.next-prev{
+  display: inline;
+  position: absolute;
+  top: 102%;
+  left: 46%;
+  margin-right: 2rem;
+}
+
+.right{
+  margin-left: 1rem;
+}
+
+.left{
+  margin-right: 1rem;
+}
+
+.up-page-3{
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  font-size: 2rem;
+}
+
+.down-page-3{
+  position:absolute;
+  bottom: 3%;
+  right: 3%;
+  font-size: 2rem;
+}
+
+/* 
+contact us
+*/
+
+.contact-us-container{
+  width: 100vw;
+  padding: 12rem 6rem;
+}
+
+.text-container{
+  width: 50%;
+  display: inline-block;
+
+}
+
+.contact{
+  display: inline-block;
+  width: 40%;
+  margin-left: 3rem;
+
+}
+
+
+}
